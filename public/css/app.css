@@ -1,0 +1,12 @@
+.copyright{
+    background-color: #1a245f;
+}
+
+nav{
+    font-weight: 900;
+}
+
+.img-card{
+    height: 18vw;
+    object-fit: cover;
+}
