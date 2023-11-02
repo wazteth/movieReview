@@ -18,3 +18,4 @@ Route::get('/about', 'App\Http\Controllers\HomeController@about')->name("home.ab
 Route::get('/movies','App\Http\Controllers\MovieController@index')->name('movie.index');
 Route::get('/movie/{id}','App\Http\Controllers\MovieController@show')->name('movie.show');
 Route::get('/admin','App\Http\Controllers\Admin\AdminHomeController@index')->name('admin.home.index');
+Route::get('/admin/movies','App\Http\Controllers\Admin\AdminMovieController@index')->name('admin.movie.index');
