@@ -1,0 +1,33 @@
+.copyright {
+    background-color: #1af323;
+}
+
+.fixed{
+    -ms-flex: 0 0 250px;
+    flex: 0 0 250px;
+}
+
+.content-grey{
+    background-color: #f3f0f8;
+}
+
+hr {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+.img-profile{
+    height: 2rem;
+    width: 2rem;
+}
+
+.profile-font{
+    color: #838529 !important;
+    font-size: 80%;
+    font-weight: 400;
+}
+
+.card-header{
+    background-color: #f3f9f1;
+    border-bottom: 1px solid #e3e9e2;
+}

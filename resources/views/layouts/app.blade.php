@@ -14,15 +14,16 @@
     <!-- header -->
     <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-4">
         <div class="container">
-            <a href="#" class="navbar-brand">Movie Review</a>
+            <a href="{{route('home.index')}}" class="navbar-brand">Movie Review</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a href="#" class="nav-link active">Home</a>
-                    <a href="#" class="nav-link active">About</a>
+                    <a href="{{route('home.index')}}" class="nav-link active">Home</a>
+                    <a href="{{route('movie.index')}}" class="nav-link active">Movies</a>
+                    <a href="{{route('home.about')}}" class="nav-link active">About</a>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Enter movie name here ....."
                             aria-label="Search">
@@ -40,6 +41,10 @@
     </header>
     <!-- header -->
 
+    <div class=" container my-4">
+        @yield('content')
+    </div>
+
     <!-- footer -->
     <div class="copyright py-4 text-center text-white">
         <div class="container">
@@ -52,9 +57,7 @@
         </div>
     </div>
     <!-- footer -->
-    <div class=" container my-4">
-        @yield('content')
-    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
