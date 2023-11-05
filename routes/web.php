@@ -19,3 +19,4 @@ Route::get('/movies','App\Http\Controllers\MovieController@index')->name('movie.
 Route::get('/movie/{id}','App\Http\Controllers\MovieController@show')->name('movie.show');
 Route::get('/admin','App\Http\Controllers\Admin\AdminHomeController@index')->name('admin.home.index');
 Route::get('/admin/movies','App\Http\Controllers\Admin\AdminMovieController@index')->name('admin.movie.index');
+Route::post('/admin/movies/store','App\Http\Controllers\Admin\AdminMovieController@store')->name('admin.movie.store');

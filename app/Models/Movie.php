@@ -81,4 +81,13 @@ class Movie extends Model
     {
         $this->attributes['updated_at'] = $updatedAt;
     }
+
+    public static function validate($request)
+    {
+        $request->validate([
+            "name" => "required|max:255",
+            "description" => "required",
+            'image' => 'image',
+        ]);
+    }
 }

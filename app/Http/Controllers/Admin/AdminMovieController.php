@@ -15,4 +15,17 @@ class AdminMovieController extends Controller
         $viewData["movies"] = Movie::all();
         return view('admin.movie.index')->with("viewData", $viewData);
     }
+    
+    public function store(Request $request)
+    {
+        Movie::validate($request);
+
+        $newMovie = new Movie();
+        $newMovie->setName($request->input('name'));
+        $newMovie->setDescription($request->input('description'));
+        $newMovie->setImage('movie.png');
+        $newMovie->save();
+
+        return back();
+    }
 }
