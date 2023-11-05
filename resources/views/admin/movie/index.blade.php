@@ -14,7 +14,7 @@
         </ul>
         @endif
 
-        <form action="{{ route('admin.movie.store') }}" method="POST">
+        <form action="{{ route('admin.movie.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col">
@@ -23,6 +23,19 @@
                         <div class="col-lg-10 col-md-6 col-sm-12">
                             <input name="name" value="{{ old('name') }}" type="text" class="form-control">
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3 row">
+                        <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Image:</label>
+                        <div class="col-lg-10 col-md-6 col-sm-12">
+                            <input type="file" name="image" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col">
+                        &nbsp;
                     </div>
                 </div>
             </div>

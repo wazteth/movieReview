@@ -13,7 +13,6 @@ class Movie extends Model
 * $this->attributes['name'] - string - contains the movie name
 * $this->attributes['description'] - string - contains the movie description
 * $this->attributes['image'] - string - contains the movie image
-* $this->attributes['star'] - int - contains the movie price
 * $this->attributes['created_at'] - timestamp - contains the movie creation date
 * $this->attributes['updated_at'] - timestamp - contains the movie update date
 */
@@ -54,15 +53,7 @@ class Movie extends Model
     {
         $this->attributes['image'] = $image;
     }
-    public function getStar()
-    {
-        return $this->attributes['star'];
-    }
-    
-    public function setStar($star)
-    {
-        $this->attributes['star'] = $star;
-    }
+   
     public function getCreatedAt()
     {
         return $this->attributes['created_at'];

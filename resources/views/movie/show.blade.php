@@ -10,7 +10,8 @@
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title">
-                    {{ $viewData["movie"]->getName() }} (Rating: ☆ {{ $viewData["movie"]->getStar() }}/5)
+                    {{ $viewData["movie"]->getName() }} (Rating: ☆ /5)
+                    {{-- {{ $viewData["movie"]->getStar() }} --}}
                 </h5>
                 <p class="card-text">{{ $viewData["movie"]->getDescription() }}</p>
             </div>
