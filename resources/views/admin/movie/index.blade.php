@@ -66,10 +66,23 @@
                 @foreach ($viewData["movies"] as $movie )
                 <tr>
                     <td>{{ $movie->getId() }}</td>
-                    <td>{{ $movie->getImage() }}</td>
+                    <td> <img src="{{ asset('/storage/'.$movie->getImage()) }}" class="card-img-top img-card">
+                    </td>
                     <td>{{ $movie->getName() }}</td>
-                    <td>Edit</td>
-                    <td>Delete</td>
+                    <td>
+                        <a class="btn btn-primary" href="{{ route('admin.movie.edit', ['id'=>$movie->getId()]) }}">
+                            <i class="bi-pencil"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <form action="{{ route('admin.movie.delete',$movie->getId()) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger">
+                                <i class="bi-trash"></i>
+                            </button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>

@@ -20,3 +20,6 @@ Route::get('/movie/{id}','App\Http\Controllers\MovieController@show')->name('mov
 Route::get('/admin','App\Http\Controllers\Admin\AdminHomeController@index')->name('admin.home.index');
 Route::get('/admin/movies','App\Http\Controllers\Admin\AdminMovieController@index')->name('admin.movie.index');
 Route::post('/admin/movies/store','App\Http\Controllers\Admin\AdminMovieController@store')->name('admin.movie.store');
+Route::delete('/admin/movies/{id}/delete', 'App\Http\Controllers\Admin\AdminMovieController@delete')->name('admin.movie.delete');
+Route::get('/admin/movies/{id}/edit', 'App\Http\Controllers\Admin\AdminMovieController@edit')->name('admin.movie.edit');
+Route::put('/admin/movies/{id}/update', 'App\Http\Controllers\Admin\AdminMovieController@update')->name('admin.movie.update');
