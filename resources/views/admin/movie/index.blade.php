@@ -34,6 +34,7 @@
                             <input type="file" name="image" class="form-control">
                         </div>
                     </div>
+
                     <div class="col">
                         &nbsp;
                     </div>
@@ -66,7 +67,8 @@
                 @foreach ($viewData["movies"] as $movie )
                 <tr>
                     <td>{{ $movie->getId() }}</td>
-                    <td> <img src="{{ asset('/storage/'.$movie->getImage()) }}" class="card-img-top img-card">
+                    <td> <img src="{{ asset('/storage/'.$movie->getImage()) }}"
+                            class="card-img-top img-card img-resize rounded mx-auto d-block">
                     </td>
                     <td>{{ $movie->getName() }}</td>
                     <td>

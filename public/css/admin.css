@@ -31,3 +31,8 @@ hr {
     background-color: #f3f9f1;
     border-bottom: 1px solid #e3e9e2;
 }
+
+.img-resize {
+    width: 200px;
+    height: auto; /* Keeps the aspect ratio */
+}

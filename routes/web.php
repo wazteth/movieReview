@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,4 @@ Route::post('/admin/movies/store','App\Http\Controllers\Admin\AdminMovieControll
 Route::delete('/admin/movies/{id}/delete', 'App\Http\Controllers\Admin\AdminMovieController@delete')->name('admin.movie.delete');
 Route::get('/admin/movies/{id}/edit', 'App\Http\Controllers\Admin\AdminMovieController@edit')->name('admin.movie.edit');
 Route::put('/admin/movies/{id}/update', 'App\Http\Controllers\Admin\AdminMovieController@update')->name('admin.movie.update');
+Auth::routes();

@@ -24,6 +24,17 @@
                     <a href="{{route('home.index')}}" class="nav-link active">Home</a>
                     <a href="{{route('movie.index')}}" class="nav-link active">Movies</a>
                     <a href="{{route('home.about')}}" class="nav-link active">About</a>
+                    <div class="vr bg-white mx-2 d-none d-lg-block"></div>
+                    @guest
+                    <a href="{{ route('login') }}" class="nav-link active">Login</a>
+                    <a href="{{ route('register') }}" class="nav-link active">Register</a>
+                    @else
+                    <form id="logout" action="{{ route('logout') }}" method="post">
+                        <a role="button" class="nav-link active"
+                            onclick="document.getElementById('logout').submit();">Logout</a>
+                        @csrf
+                    </form>
+                    @endguest
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Enter movie name here ....."
                             aria-label="Search">
